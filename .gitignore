@@ -1,0 +1,35 @@
+# object files
+*.o
+
+# binaries
+*.so
+scall
+
+# logs
+*.log
+
+# GitEye specific
+/.project
+
+# backups, temporaries, etc.
+/tmp
+*.bak
+*.old
+*.orig
+*.tmp
+*.temp
+~.*
+*~
+
+# anything cmake could recreate
+/CMakeFiles
+/build
+
+# sample key, certificate requests, certificates
+*.cer
+*.der
+*.pem
+*.csr
+*.key
+
+# others

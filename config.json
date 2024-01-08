@@ -1,0 +1,63 @@
+{
+    "http": {
+        "enabled": false,
+        "address": "0.0.0.0",
+        "port": 7675
+    },
+    "https": {
+        "enabled": true,
+        "address": "0.0.0.0",
+        "port": 7676,
+        "certificate": "file://./servercert/scall.pem",
+        "key": "file://./servercert/scall.key",
+        "sslv2_enabled": false,
+        "sslv3_enabled": false,
+        "tlsv1_enabled": false,
+        "tlsv11_enabled": false,
+        "tlsv12_enabled": true,
+        "tlsv13_enabled": true,
+        "default_workarounds_enabled": true,
+        "single_diffie_hellman_use_enabled": true,
+        "verify_options": 1,
+        "compression_enabled": false
+    },
+    "worker_limit": 2,
+    "connection_limit": 50,
+    "connection_timeout": 10,
+    "verbs": [
+        "GET",
+        "POST",
+        "PUT",
+        "PATCH",
+        "DELETE",
+        "OPTIONS"
+    ],
+    "m_path_max_depth": 5,
+    "target": {
+        "base_url": "https://localhost:1984",
+        "target_verify_peer": true,
+        "ca": "./servercert/CAcert.pem"
+    },
+    "keys": {
+        "dir": "./clientcert/",
+        "passwords": {
+            "key_id_1": "somepass",
+            "key_id_2": "anotherpass"
+        }
+    },
+    "http_signature": {
+        "enabled": true,
+        "version": "cavage12",
+        "cavage12_params": {
+            "key_id": "x-hs-key-id",
+            "algorithm": "x-hs-algorithm",
+            "headers": "x-hs-headers",
+            "key_id_alias": "x-hs-key-alias",
+            "send_certificate": "x-hs-send-certificate"
+        }
+    },
+    "mtls": {
+        "enabled": true,
+        "key_id": "x-mtls-key-id"
+    }
+}
