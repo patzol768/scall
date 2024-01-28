@@ -32,11 +32,11 @@
         "DELETE",
         "OPTIONS"
     ],
-    "m_path_max_depth": 5,
+    "path_max_depth": 8,
     "target": {
         "base_url": "https://localhost:1984",
         "target_verify_peer": true,
-        "target_verify_host": true,
+        "target_verify_host": false,
         "ca": "./servercert/CAcert.pem"
     },
     "keys": {
