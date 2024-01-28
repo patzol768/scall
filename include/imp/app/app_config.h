@@ -52,6 +52,7 @@ class App_config
     bool get_hs_enabled() const;
     bool get_mtls_enabled() const;
     bool get_target_verify_peer() const;
+    bool get_target_verify_host() const;
 
     uint16_t get_port() const;
     uint16_t get_ssl_port() const;
@@ -133,6 +134,7 @@ class App_config
     bool m_hs_enabled;
     bool m_mtls_enabled;
     bool m_target_verify_peer;
+    bool m_target_verify_host;
 
     uint16_t m_port;
     uint16_t m_ssl_port;

@@ -7,6 +7,8 @@
  * https://opensource.org/license/mit/
  */
 
+#pragma once
+
 #include <log4cplus/logger.h>
 #include <restbed>
 

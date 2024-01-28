@@ -142,6 +142,11 @@ bool App_config::get_target_verify_peer() const
     return m_target_verify_peer;
 }
 
+bool App_config::get_target_verify_host() const
+{
+    return m_target_verify_host;
+}
+
 uint16_t App_config::get_port() const
 {
     return m_port;
@@ -448,6 +453,7 @@ void App_config::set_config(nlohmann::json const& j)
     FILL_IF_EXISTS(j, "/target/base_url", m_target_base_url);
     FILL_IF_EXISTS(j, "/target/ca", m_target_ca);
     FILL_IF_EXISTS(j, "/target/target_verify_peer", m_target_verify_peer);
+    FILL_IF_EXISTS(j, "/target/target_verify_host", m_target_verify_host);
 
     FILL_IF_EXISTS(j, "/http_signature/enabled", m_hs_enabled);
     FILL_IF_EXISTS(j, "/http_signature/version", m_hs_version);
